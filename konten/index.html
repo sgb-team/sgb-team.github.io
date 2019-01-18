@@ -4,8 +4,9 @@
 <body>
 <script>
 var fullurl = window.location.href;
-var alihkan = fullurl.replace("sgb-team.github.io", "sharing.sgb.or.id");
-window.location = alihkan;
+var url = new URL(fullurl);
+var kode = url.searchParams.get("id");
+window.location = "https://sharing.sgb.or.id/konten/" + kode;
 </script>
 </body>
 </html>
